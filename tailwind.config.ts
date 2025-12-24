@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +60,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        score: {
+          hot: "hsl(var(--score-hot))",
+          warm: "hsl(var(--score-warm))",
+          cold: "hsl(var(--score-cold))",
+          qualified: "hsl(var(--score-qualified))",
+        },
+        stage: {
+          new: "hsl(var(--stage-new))",
+          contacted: "hsl(var(--stage-contacted))",
+          interested: "hsl(var(--stage-interested))",
+          visit: "hsl(var(--stage-visit))",
+          payment: "hsl(var(--stage-payment))",
+          admission: "hsl(var(--stage-admission))",
+          "not-qualified": "hsl(var(--stage-not-qualified))",
+        },
+        status: {
+          pending: "hsl(var(--status-pending))",
+          success: "hsl(var(--status-success))",
+          error: "hsl(var(--status-error))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +103,21 @@ export default {
             height: "0",
           },
         },
+        "pulse-ring": {
+          "0%": {
+            transform: "scale(0.8)",
+            opacity: "0.8",
+          },
+          "100%": {
+            transform: "scale(1.3)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-ring": "pulse-ring 1.5s ease-out infinite",
       },
     },
   },
